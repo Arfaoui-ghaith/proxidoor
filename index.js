@@ -10,29 +10,21 @@ const request = async (proxy,url,headers) => {
     });
     return response;
 }
-
 const call = async (url,headers={}) => {
-    let res0 = await fetch(url, {
-        ...headers
-    }).catch(async er => {
-        const proxies = await provider();
-        const responses = (await Promise.all(
-            proxies.map(async proxy => {
-                const res = await request(proxy, url, headers).catch(er => {
-                    return null
-                });
-                return {data: await res.text(), status: 200, url};
-            })
-        ));
+    const proxies = await provider();
 
-        if(responses.filter(res => res != null).length > 0){
-            let res = responses[0];
-            return {data: await res.text(), status: 200, url};
+    let response;
+    for(let proxy of proxies){
+        response = { proxy, success: false, status: 404, text: null };
+        let res = await request(proxy, url, headers).catch(err => null);
+        let r = await res;
+        if(r != null && r.ok == true) {
+            response = {proxy, success: r.ok, status: r.status, text: await res.text()};
+            break;
         }
-        return {data: "", status: 404, url}
-    });
+    }
 
-    return { data: await res0.text(), status: res0.status, url }
+    return response;
 }
 
 module.exports = {
