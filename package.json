@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arfaoui-ghaith/proxidoor.git"
+  },
   "keywords": [
     "proxy",
     "scrape",
@@ -15,6 +19,9 @@
   ],
   "author": "7gsa",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arfaoui-ghaith/proxidoor/issues"
+  },
   "dependencies": {
     "axios": "^1.3.3",
     "cheerio": "^1.0.0-rc.12",
