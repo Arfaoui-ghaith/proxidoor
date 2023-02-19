@@ -1,6 +1,6 @@
 # Proxidoor
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+[![N|Solid](https://cdn.discordapp.com/attachments/797496852642922539/1076843094256918629/Screenshot_20230219_132544_Brave.jpg)](https://nodesource.com/products/nsolid)
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
