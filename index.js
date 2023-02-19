@@ -19,7 +19,7 @@ const call = async (url,headers={}) => {
         let res = await request(proxy, url, headers).catch(err => null);
         let r = await res;
         if(r != null && r.ok == true) {
-            response = {proxy, success: r.ok, status: r.status, text: await res.text()};
+            response = {proxy, success: r.ok, status: r.status, html: await res.text()};
             break;
         }
     }
