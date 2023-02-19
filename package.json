@@ -1,6 +1,6 @@
 {
   "name": "proxidoor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "proxidoor helps you make HTTP requests through a rotating proxy, you can use it for services such as web scraping, web crawling and more.",
   "main": "index.js",
   "scripts": {
