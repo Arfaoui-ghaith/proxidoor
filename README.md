@@ -19,7 +19,7 @@ Proxidoor workflows :
 
 ## Proxidoor uses different technologies to achieve its purpose :
 
-Dillinger uses a number of open source projects to work properly:
+Proxidoor uses a number of open source projects to work properly:
 
 - cheerio
 - https-proxy-agent
